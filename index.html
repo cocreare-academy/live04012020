@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title></title>
+        <style>
+            form {
+                display: flex;
+                flex-direction: column;
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            form input {
+                margin-bottom: 10px;
+            }
+
+            .mensagem {
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .mensagem.error {
+                background-color: #FF3333;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <h1> 
+            Formulário
+        </h1>
+
+        <pre class="mensagem">
+
+        </pre>
+
+        <form id="formulario-exemplo" name="formulario-exemplo" onsubmit="return sendForm();" action="index.html" method="GET">
+            <input class="input-form"  name="nome" type="text" placeholder="Nome">
+            <input class="input-form" name="email" type="text" placeholder="E-mail">
+            <input class="input-form" onkeyup="mascaraTelefone(event)" name="phone" id="phone" type="tel" placeholder="Telefone">
+            <input type="submit" value="Enviar">
+        </form>
+        
+        
+
+        <script src="./functions.js"></script>
+    </body>
+</html>
